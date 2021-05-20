@@ -9,8 +9,31 @@
     <atom:link href="http://toss.gq/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录孤岛历程</description>
-    <pubDate>Mon, 30 Nov 2020 11:51:40 GMT</pubDate>
+    <pubDate>Sat, 15 May 2021 10:04:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>QtScrcpy</title>
+      <link>http://toss.gq/posts/3d4002cd.html</link>
+      <guid>http://toss.gq/posts/3d4002cd.html</guid>
+      <pubDate>Sat, 15 May 2021 10:04:51 GMT</pubDate>
+      
+      <description>&lt;p&gt;摘要：QtScrcpy可以通过USB(或通过TCP/IP)连接Android设备，并进行显示和控制。不需要root权限。&lt;/p&gt;</description>
+      
+      
+      
+      
+      <category domain="http://toss.gq/categories/Android/">Android</category>
+      
+      
+      <category domain="http://toss.gq/tags/QtScrcpy/">QtScrcpy</category>
+      
+      <category domain="http://toss.gq/tags/%E6%8A%95%E5%B1%8F/">投屏</category>
+      
+      
+      <comments>http://toss.gq/posts/3d4002cd.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Everything搜索神器</title>
@@ -61,9 +84,9 @@
       <category domain="http://toss.gq/categories/Windows/">Windows</category>
       
       
-      <category domain="http://toss.gq/tags/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%83%8F/">屏幕录像</category>
-      
       <category domain="http://toss.gq/tags/Camtasia/">Camtasia</category>
+      
+      <category domain="http://toss.gq/tags/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%83%8F/">屏幕录像</category>
       
       
       <comments>http://toss.gq/posts/e29e138f.html#disqus_thread</comments>
@@ -90,9 +113,9 @@
       <category domain="http://toss.gq/categories/Windows/">Windows</category>
       
       
-      <category domain="http://toss.gq/tags/Bandicam/">Bandicam</category>
-      
       <category domain="http://toss.gq/tags/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%83%8F/">屏幕录像</category>
+      
+      <category domain="http://toss.gq/tags/Bandicam/">Bandicam</category>
       
       <category domain="http://toss.gq/tags/%E7%8F%AD%E8%BF%AA%E5%BD%95%E5%B1%8F/">班迪录屏</category>
       
@@ -507,29 +530,6 @@
       
       
       <comments>http://toss.gq/posts/de512d8e.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>软件APP蓝奏云网盘更新下载合集</title>
-      <link>http://toss.gq/posts/e40bb0d.html</link>
-      <guid>http://toss.gq/posts/e40bb0d.html</guid>
-      <pubDate>Sat, 27 Jun 2020 00:27:35 GMT</pubDate>
-      
-      <description>&lt;p&gt;蓝奏云是目前最好用的网盘之一，下载速度很快，不过限制文件最大100M，所以大多是用来分享软件和APP。&lt;/p&gt;</description>
-      
-      
-      
-      
-      <category domain="http://toss.gq/categories/%E7%BD%91%E7%9B%98/">网盘</category>
-      
-      
-      <category domain="http://toss.gq/tags/%E5%90%88%E9%9B%86/">合集</category>
-      
-      <category domain="http://toss.gq/tags/%E8%93%9D%E5%A5%8F%E4%BA%91/">蓝奏云</category>
-      
-      
-      <comments>http://toss.gq/posts/e40bb0d.html#disqus_thread</comments>
       
     </item>
     

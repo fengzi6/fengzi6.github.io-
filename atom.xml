@@ -6,7 +6,7 @@
   <link href="http://toss.gq/atom.xml" rel="self"/>
   
   <link href="http://toss.gq/"/>
-  <updated>2020-11-30T11:51:40.520Z</updated>
+  <updated>2021-05-15T10:04:32.156Z</updated>
   <id>http://toss.gq/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QtScrcpy</title>
+    <link href="http://toss.gq/posts/3d4002cd.html"/>
+    <id>http://toss.gq/posts/3d4002cd.html</id>
+    <published>2021-05-15T10:04:51.000Z</published>
+    <updated>2021-05-15T10:04:32.156Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘要：QtScrcpy可以通过USB(或通过TCP/IP)连接Android设备，并进行显示和控制。不需要root权限。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Android" scheme="http://toss.gq/categories/Android/"/>
+    
+    
+    <category term="QtScrcpy" scheme="http://toss.gq/tags/QtScrcpy/"/>
+    
+    <category term="投屏" scheme="http://toss.gq/tags/%E6%8A%95%E5%B1%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>Everything搜索神器</title>
@@ -64,9 +85,9 @@
     <category term="Windows" scheme="http://toss.gq/categories/Windows/"/>
     
     
-    <category term="屏幕录像" scheme="http://toss.gq/tags/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%83%8F/"/>
-    
     <category term="Camtasia" scheme="http://toss.gq/tags/Camtasia/"/>
+    
+    <category term="屏幕录像" scheme="http://toss.gq/tags/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%83%8F/"/>
     
   </entry>
   
@@ -91,9 +112,9 @@
     <category term="Windows" scheme="http://toss.gq/categories/Windows/"/>
     
     
-    <category term="Bandicam" scheme="http://toss.gq/tags/Bandicam/"/>
-    
     <category term="屏幕录像" scheme="http://toss.gq/tags/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%83%8F/"/>
+    
+    <category term="Bandicam" scheme="http://toss.gq/tags/Bandicam/"/>
     
     <category term="班迪录屏" scheme="http://toss.gq/tags/%E7%8F%AD%E8%BF%AA%E5%BD%95%E5%B1%8F/"/>
     
@@ -473,27 +494,6 @@
     <category term="二维码" scheme="http://toss.gq/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81/"/>
     
     <category term="API接口" scheme="http://toss.gq/tags/API%E6%8E%A5%E5%8F%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>软件APP蓝奏云网盘更新下载合集</title>
-    <link href="http://toss.gq/posts/e40bb0d.html"/>
-    <id>http://toss.gq/posts/e40bb0d.html</id>
-    <published>2020-06-27T00:27:35.000Z</published>
-    <updated>2020-10-11T10:12:17.484Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;蓝奏云是目前最好用的网盘之一，下载速度很快，不过限制文件最大100M，所以大多是用来分享软件和APP。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="网盘" scheme="http://toss.gq/categories/%E7%BD%91%E7%9B%98/"/>
-    
-    
-    <category term="合集" scheme="http://toss.gq/tags/%E5%90%88%E9%9B%86/"/>
-    
-    <category term="蓝奏云" scheme="http://toss.gq/tags/%E8%93%9D%E5%A5%8F%E4%BA%91/"/>
     
   </entry>
   

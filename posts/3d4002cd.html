@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QtScrcpy | 孤岛</title><meta name="keywords" content="QtScrcpy,投屏"><meta name="author" content="孤岛"><meta name="copyright" content="孤岛"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="摘要：QtScrcpy可以通过USB(或通过TCP&#x2F;IP)连接Android设备，并进行显示和控制。不需要root权限。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QtScrcpy">
+<meta property="og:url" content="http://toss.gq/posts/3d4002cd.html">
+<meta property="og:site_name" content="孤岛">
+<meta property="og:description" content="摘要：QtScrcpy可以通过USB(或通过TCP&#x2F;IP)连接Android设备，并进行显示和控制。不需要root权限。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://toss.gq/img/cover4.jpg">
+<meta property="article:published_time" content="2021-05-15T10:04:51.000Z">
+<meta property="article:modified_time" content="2021-05-15T10:04:32.156Z">
+<meta property="article:author" content="孤岛">
+<meta property="article:tag" content="QtScrcpy">
+<meta property="article:tag" content="投屏">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://toss.gq/img/cover4.jpg"><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="http://toss.gq/posts/3d4002cd"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-05-15 18:04:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="孤岛" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="孤岛" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">38</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-book-reader"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%BD%92%E6%A1%A3"><i class="fa-fw /archives/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E6%A0%87%E7%AD%BE"><i class="fa-fw /tags/"></i><span> 1</span></a></li><li><a class="site-page child" href="/%E5%88%86%E7%B1%BB"><i class="fa-fw /categories/"></i><span> 2</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 收藏</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%9B%BE%E5%BA%93"><i class="fa-fw /photo/"></i><span> 0</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-anchor"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/cover4.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孤岛</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-book-reader"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%BD%92%E6%A1%A3"><i class="fa-fw /archives/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E6%A0%87%E7%AD%BE"><i class="fa-fw /tags/"></i><span> 1</span></a></li><li><a class="site-page child" href="/%E5%88%86%E7%B1%BB"><i class="fa-fw /categories/"></i><span> 2</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 收藏</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E5%9B%BE%E5%BA%93"><i class="fa-fw /photo/"></i><span> 0</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-anchor"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">QtScrcpy</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-05-15T10:04:51.000Z" title="发表于 2021-05-15 18:04:51">2021-05-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-05-15T10:04:32.156Z" title="更新于 2021-05-15 18:04:32">2021-05-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Android/">Android</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="QtScrcpy"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>摘要：QtScrcpy可以通过USB(或通过TCP/IP)连接Android设备，并进行显示和控制。不需要root权限。</p>
+<span id="more"></span>QtScrcpy可以通过USB(或通过TCP/IP)连接Android设备，并进行显示和控制。不需要root权限。单个应用程序最多支持16个安卓设备同时连接。同时支持GNU/Linux，Windows和MacOS三大主流桌面平台。
+
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><h3 id="精简模式"><a href="#精简模式" class="headerlink" title="精简模式"></a>精简模式</h3><p>在你的电脑上接入Android设备，然后运行程序，点击<code>一键USB连接</code>或者<code>一键WIFI连接</code></p>
+<h3 id="非精简模式"><a href="#非精简模式" class="headerlink" title="非精简模式"></a>非精简模式</h3><p>在你的电脑上接入Android设备，然后运行程序，按顺序点击如下按钮即可连接到Android设备</p>
+<p><img src="/images/run.png"></p>
+<h3 id="无线连接步骤（保证手机和电脑在同一个局域网）："><a href="#无线连接步骤（保证手机和电脑在同一个局域网）：" class="headerlink" title="无线连接步骤（保证手机和电脑在同一个局域网）："></a>无线连接步骤（保证手机和电脑在同一个局域网）：</h3><ol>
+<li>安卓手机端在开发者选项中打开usb调试</li>
+<li>通过usb连接安卓手机到电脑</li>
+<li>点击刷新设备，会看到有设备号更新出来</li>
+<li>点击获取设备IP</li>
+<li>点击启动adbd</li>
+<li>无线连接</li>
+<li>再次点击刷新设备，发现多出了一个IP地址开头的设备，选择这个设备</li>
+<li>启动服务</li>
+</ol>
+<p>备注：启动adbd以后不用再连着usb线了，以后连接断开都不再需要，除非安卓adbd停了需要重新启动</p>
+<h2 id="界面按钮介绍："><a href="#界面按钮介绍：" class="headerlink" title="界面按钮介绍："></a>界面按钮介绍：</h2><ul>
+<li><p>启动配置：启动服务前的功能参数设置</p>
+<p>分别可以设置本地录制视频的比特率、分辨率、录制格式、录像保存路径等。</p>
+<ul>
+<li>仅后台录制：启动服务不现实界面，只是录制Android设备屏幕</li>
+<li>窗口置顶：Android设备视频窗口置顶显示</li>
+<li>自动息屏：启动服务以后，自动关闭Android设备屏幕节省电量</li>
+<li>使用reverse：服务启动模式，出现服务启动失败报错more than one device可以去掉这个勾选尝试连接</li>
+</ul>
+</li>
+<li><p>刷新设备列表：刷新当前连接的设备</p>
+</li>
+<li><p>启动服务：连接到Android设备</p>
+</li>
+<li><p>停止服务：断开与Android设备的连接</p>
+</li>
+<li><p>停止所有服务：断开所有已连接的Android设备</p>
+</li>
+<li><p>获取设备ip：获取到Android设备的ip地址，更新到“无线”区域中，方便进行无线连接</p>
+</li>
+<li><p>启动adbd：启动Android设备的adbd服务，无线连接之前，必须要启动。</p>
+</li>
+<li><p>无线连接：使用无线方式连接Android设备</p>
+</li>
+<li><p>无线断开：断开无线方式连接的Android设备</p>
+</li>
+<li><p>adb命令行：方便执行自定义adb命令（目前不支持阻塞命令，例如shell）</p>
+</li>
+</ul>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>快捷键(Windows)</th>
+<th>快捷键 (macOS)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>切换全屏</td>
+<td><code>Ctrl</code>+<code>f</code></td>
+<td><code>Cmd</code>+<code>f</code></td>
+</tr>
+<tr>
+<td>调整窗口大小为 1:1</td>
+<td><code>Ctrl</code>+<code>g</code></td>
+<td><code>Cmd</code>+<code>g</code></td>
+</tr>
+<tr>
+<td>调整窗口大小去除黑边</td>
+<td><code>Ctrl</code>+<code>w</code> | <em>左键双击</em></td>
+<td><code>Cmd</code>+<code>w</code> | <em>左键双击</em></td>
+</tr>
+<tr>
+<td>点击 <code>主页</code></td>
+<td><code>Ctrl</code>+<code>h</code> | <em>点击鼠标中键</em></td>
+<td><code>Ctrl</code>+<code>h</code> | <em>点击鼠标中键</em></td>
+</tr>
+<tr>
+<td>点击 <code>BACK</code></td>
+<td><code>Ctrl</code>+<code>b</code> | <em>右键双击</em></td>
+<td><code>Cmd</code>+<code>b</code> | <em>右键双击</em></td>
+</tr>
+<tr>
+<td>点击 <code>APP_SWITCH</code></td>
+<td><code>Ctrl</code>+<code>s</code></td>
+<td><code>Cmd</code>+<code>s</code></td>
+</tr>
+<tr>
+<td>点击 <code>MENU</code></td>
+<td><code>Ctrl</code>+<code>m</code></td>
+<td><code>Ctrl</code>+<code>m</code></td>
+</tr>
+<tr>
+<td>点击 <code>VOLUME_UP</code></td>
+<td><code>Ctrl</code>+<code>↑</code> <em>(上)</em></td>
+<td><code>Cmd</code>+<code>↑</code> <em>(上)</em></td>
+</tr>
+<tr>
+<td>点击 <code>VOLUME_DOWN</code></td>
+<td><code>Ctrl</code>+<code>↓</code> <em>(下)</em></td>
+<td><code>Cmd</code>+<code>↓</code> <em>(下)</em></td>
+</tr>
+<tr>
+<td>点击 <code>POWER</code></td>
+<td><code>Ctrl</code>+<code>p</code></td>
+<td><code>Cmd</code>+<code>p</code></td>
+</tr>
+<tr>
+<td>打开电源</td>
+<td><em>右键双击</em></td>
+<td><em>右键双击</em></td>
+</tr>
+<tr>
+<td>关闭屏幕 (保持投屏)</td>
+<td><code>Ctrl</code>+<code>o</code></td>
+<td><code>Cmd</code>+<code>o</code></td>
+</tr>
+<tr>
+<td>打开下拉菜单</td>
+<td><code>Ctrl</code>+<code>n</code></td>
+<td><code>Cmd</code>+<code>n</code></td>
+</tr>
+<tr>
+<td>关闭下拉菜单</td>
+<td><code>Ctrl</code>+<code>Shift</code>+<code>n</code></td>
+<td><code>Cmd</code>+<code>Shift</code>+<code>n</code></td>
+</tr>
+<tr>
+<td>复制到剪切板</td>
+<td><code>Ctrl</code>+<code>c</code></td>
+<td><code>Cmd</code>+<code>c</code></td>
+</tr>
+<tr>
+<td>剪切到剪切板</td>
+<td><code>Ctrl</code>+<code>x</code></td>
+<td><code>Cmd</code>+<code>x</code></td>
+</tr>
+<tr>
+<td>同步剪切板并粘贴</td>
+<td><code>Ctrl</code>+<code>v</code></td>
+<td><code>Cmd</code>+<code>v</code></td>
+</tr>
+<tr>
+<td>注入电脑剪切板文本</td>
+<td><code>Ctrl</code>+<code>Shift</code>+<code>v</code></td>
+<td><code>Cmd</code>+<code>Shift</code>+<code>v</code></td>
+</tr>
+</tbody></table>
+<p>鼠标左键双击黑色区域可以去除黑色区域</p>
+<p>如果电源关闭，鼠标右键双击打开电源；如果电源开启，鼠标右键双击相当于返回</p>
+<h2 id="自定义按键映射"><a href="#自定义按键映射" class="headerlink" title="自定义按键映射"></a>自定义按键映射</h2><p>可以根据需要，自己编写脚本将PC键盘按键映射为手机的触摸点击，编写规则在<a target="_blank" rel="noopener" href="https://gitee.com/Barryda/QtScrcpy/blob/master/docs/KeyMapDes_zh.md">这里</a>。</p>
+<p>默认自带了针对和平精英手游和抖音进行键鼠映射的映射脚本，开启平精英手游后可以用键鼠像玩端游一样玩和平精英手游，开启抖音映射以后可以使用上下左右方向键模拟上下左右滑动，你也可以按照<a target="_blank" rel="noopener" href="https://gitee.com/Barryda/QtScrcpy/blob/master/docs/KeyMapDes_zh.md">编写规则</a>编写其他游戏的映射文件，默认按键映射如下：</p>
+<p><img src="/images/QtScrcpy.jpg"></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/mp/video?__biz=MzU1NTg5MjYyNw==&mid=100000015&sn=3e301fdc5a364bd16d6207fa674bc8b3&vid=wxv_968792362971430913&idx=1&vidsn=eec329cc13c3e24c187dc9b4d5eb8760&fromid=1&scene=20&xtrack=1&clicktime=1567346543&sessionid=1567346375&subscene=92&ascene=0&fasttmpl_type=0&fasttmpl_fullversion=4730859-zh_CN-zip&fasttmpl_flag=0&realreporttime=1567346543910#wechat_redirect">这里有玩和平精英的视频演示</a></p>
+<p>自定义按键映射操作方法如下：</p>
+<ul>
+<li>编写自定义脚本放入keymap目录</li>
+<li>点击刷新脚本，确保脚本可以被检测到</li>
+<li>选择需要的脚本</li>
+<li>连接手机并启动服务之后，点击应用脚本</li>
+<li>按~键（数字键1左边）切换为自定义映射模式即可体验（具体按什么键要看你按键脚本定义的switchKey）</li>
+<li>再次按~键切换为正常控制模式</li>
+<li>要想wasd控制开车记得在载具设置中设置为单摇杆模式</li>
+</ul>
+<h2 id="学习它"><a href="#学习它" class="headerlink" title="学习它"></a>学习它</h2><p>如果你对它感兴趣，想学习它的实现原理而又感觉无从下手，可以选择购买我录制的视频课程， 里面详细介绍了整个软件的开发架构以及开发流程，带你从无到有的开发QtScrcpy：</p>
+<p>课程介绍：<a target="_blank" rel="noopener" href="https://blog.csdn.net/rankun1/article/details/87970523">https://blog.csdn.net/rankun1/article/details/87970523</a></p>
+<p>或者你也可以加入我的QtScrcpy QQ群，和志同道合的朋友一块互相交流技术：</p>
+<p>QQ群号：901736468</p>
+<h2 id="下载这个软件"><a href="#下载这个软件" class="headerlink" title="下载这个软件"></a>下载这个软件</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>Windows平台，你可以直接使用我编译好的可执行程序:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://gitee.com/Barryda/QtScrcpy/releases">国内下载</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/barry-ran/QtScrcpy/releases">国外下载</a></li>
+</ul>
+<p>你也可以<a target="_blank" rel="noopener" href="https://gitee.com/Barryda/QtScrcpy##%E5%A6%82%E4%BD%95%E7%BC%96%E8%AF%91">自己编译</a></p>
+<h3 id="Mac-OS"><a href="#Mac-OS" class="headerlink" title="Mac OS"></a>Mac OS</h3><p>Mac OS平台，你可以直接使用我编译好的可执行程序:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://gitee.com/Barryda/QtScrcpy/releases">国内下载</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/barry-ran/QtScrcpy/releases">国外下载</a></li>
+</ul>
+<p>你也可以<a target="_blank" rel="noopener" href="https://gitee.com/Barryda/QtScrcpy##%E5%A6%82%E4%BD%95%E7%BC%96%E8%AF%91">自己编译</a></p>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>目前只提供了windows和mac平台的可执行程序，如果需要linux平台的可执行程序，</p>
+<p>您通常需要<a target="_blank" rel="noopener" href="https://gitee.com/Barryda/QtScrcpy##%E5%A6%82%E4%BD%95%E7%BC%96%E8%AF%91">自己编译</a>。别担心，这并不难。</p>
+<p>目前只在ubuntu上测试过</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">孤岛</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://toss.gq/posts/3d4002cd.html">http://toss.gq/posts/3d4002cd.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://toss.gq" target="_blank">孤岛</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/QtScrcpy/">QtScrcpy</a><a class="post-meta__tags" href="/tags/%E6%8A%95%E5%B1%8F/">投屏</a></div><div class="post_share"><div class="social-share" data-image="/img/cover4.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/4a1ff687.html"><img class="next-cover" src="/images/Everything.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Everything搜索神器</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">孤岛</div><div class="author-info__description">记录孤岛历程</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">38</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="/atom.xml" target="_blank" title="Atom"><i class="fas fa-atom"></i></a><a class="social-icon" href="/rss2.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C"><span class="toc-number">1.</span> <span class="toc-text">运行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%BE%E7%AE%80%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.</span> <span class="toc-text">精简模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E7%B2%BE%E7%AE%80%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">非精简模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E7%BA%BF%E8%BF%9E%E6%8E%A5%E6%AD%A5%E9%AA%A4%EF%BC%88%E4%BF%9D%E8%AF%81%E6%89%8B%E6%9C%BA%E5%92%8C%E7%94%B5%E8%84%91%E5%9C%A8%E5%90%8C%E4%B8%80%E4%B8%AA%E5%B1%80%E5%9F%9F%E7%BD%91%EF%BC%89%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">无线连接步骤（保证手机和电脑在同一个局域网）：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2%E6%8C%89%E9%92%AE%E4%BB%8B%E7%BB%8D%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">界面按钮介绍：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">3.</span> <span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%89%E9%94%AE%E6%98%A0%E5%B0%84"><span class="toc-number">4.</span> <span class="toc-text">自定义按键映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%AE%83"><span class="toc-number">5.</span> <span class="toc-text">学习它</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E8%BF%99%E4%B8%AA%E8%BD%AF%E4%BB%B6"><span class="toc-number">6.</span> <span class="toc-text">下载这个软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows"><span class="toc-number">6.1.</span> <span class="toc-text">Windows</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac-OS"><span class="toc-number">6.2.</span> <span class="toc-text">Mac OS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux"><span class="toc-number">6.3.</span> <span class="toc-text">Linux</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/3d4002cd.html" title="QtScrcpy"><img src="/img/cover4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="QtScrcpy"/></a><div class="content"><a class="title" href="/posts/3d4002cd.html" title="QtScrcpy">QtScrcpy</a><time datetime="2021-05-15T10:04:51.000Z" title="发表于 2021-05-15 18:04:51">2021-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/4a1ff687.html" title="Everything搜索神器"><img src="/images/Everything.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Everything搜索神器"/></a><div class="content"><a class="title" href="/posts/4a1ff687.html" title="Everything搜索神器">Everything搜索神器</a><time datetime="2020-11-30T11:30:09.000Z" title="发表于 2020-11-30 19:30:09">2020-11-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/e29e138f.html" title="TechSmith Camtasia Studio v2020.0.12/2019.0.10 破解版"><img src="/images/Camtasia-Studio.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TechSmith Camtasia Studio v2020.0.12/2019.0.10 破解版"/></a><div class="content"><a class="title" href="/posts/e29e138f.html" title="TechSmith Camtasia Studio v2020.0.12/2019.0.10 破解版">TechSmith Camtasia Studio v2020.0.12/2019.0.10 破解版</a><time datetime="2020-11-29T12:10:49.000Z" title="发表于 2020-11-29 20:10:49">2020-11-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3e4d68fc.html" title="班迪录屏 Bandicam v5.0.0.1796 破解版"><img src="/images/Bandicam.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="班迪录屏 Bandicam v5.0.0.1796 破解版"/></a><div class="content"><a class="title" href="/posts/3e4d68fc.html" title="班迪录屏 Bandicam v5.0.0.1796 破解版">班迪录屏 Bandicam v5.0.0.1796 破解版</a><time datetime="2020-11-29T11:50:22.000Z" title="发表于 2020-11-29 19:50:22">2020-11-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/969d9b17.html" title="显示器如何选择"><img src="/images/969d9b17.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="显示器如何选择"/></a><div class="content"><a class="title" href="/posts/969d9b17.html" title="显示器如何选择">显示器如何选择</a><time datetime="2020-11-15T01:26:32.000Z" title="发表于 2020-11-15 09:26:32">2020-11-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 孤岛</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">嗨，欢迎来到我的<a target="_blank" rel="noopener" href="https://dpigu.github.io/">博客</a>！</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
