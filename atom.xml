@@ -6,7 +6,7 @@
   <link href="http://toss.gq/atom.xml" rel="self"/>
   
   <link href="http://toss.gq/"/>
-  <updated>2021-05-15T10:04:32.156Z</updated>
+  <updated>2021-05-20T11:31:41.572Z</updated>
   <id>http://toss.gq/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://toss.gq/posts/3d4002cd.html"/>
     <id>http://toss.gq/posts/3d4002cd.html</id>
     <published>2021-05-15T10:04:51.000Z</published>
-    <updated>2021-05-15T10:04:32.156Z</updated>
+    <updated>2021-05-20T11:31:41.572Z</updated>
     
     
     <summary type="html">&lt;p&gt;摘要：QtScrcpy可以通过USB(或通过TCP/IP)连接Android设备，并进行显示和控制。不需要root权限。&lt;/p&gt;</summary>
@@ -85,9 +85,9 @@
     <category term="Windows" scheme="http://toss.gq/categories/Windows/"/>
     
     
-    <category term="Camtasia" scheme="http://toss.gq/tags/Camtasia/"/>
-    
     <category term="屏幕录像" scheme="http://toss.gq/tags/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%83%8F/"/>
+    
+    <category term="Camtasia" scheme="http://toss.gq/tags/Camtasia/"/>
     
   </entry>
   
@@ -112,9 +112,9 @@
     <category term="Windows" scheme="http://toss.gq/categories/Windows/"/>
     
     
-    <category term="屏幕录像" scheme="http://toss.gq/tags/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%83%8F/"/>
-    
     <category term="Bandicam" scheme="http://toss.gq/tags/Bandicam/"/>
+    
+    <category term="屏幕录像" scheme="http://toss.gq/tags/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%83%8F/"/>
     
     <category term="班迪录屏" scheme="http://toss.gq/tags/%E7%8F%AD%E8%BF%AA%E5%BD%95%E5%B1%8F/"/>
     
@@ -406,7 +406,7 @@
     <link href="http://toss.gq/posts/85e85e2c.html"/>
     <id>http://toss.gq/posts/85e85e2c.html</id>
     <published>2020-07-05T02:49:33.000Z</published>
-    <updated>2021-05-02T10:44:24.189Z</updated>
+    <updated>2021-05-29T02:11:23.970Z</updated>
     
     
       
@@ -468,9 +468,9 @@
     <category term="网盘" scheme="http://toss.gq/categories/%E7%BD%91%E7%9B%98/"/>
     
     
-    <category term="免费" scheme="http://toss.gq/tags/%E5%85%8D%E8%B4%B9/"/>
-    
     <category term="谷歌" scheme="http://toss.gq/tags/%E8%B0%B7%E6%AD%8C/"/>
+    
+    <category term="免费" scheme="http://toss.gq/tags/%E5%85%8D%E8%B4%B9/"/>
     
   </entry>
   
