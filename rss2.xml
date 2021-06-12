@@ -9,8 +9,37 @@
     <atom:link href="http://toss.gq/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>记录孤岛历程</description>
-    <pubDate>Thu, 20 May 2021 11:31:41 GMT</pubDate>
+    <pubDate>Sat, 12 Jun 2021 14:02:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>搞机折腾-使用MPC-BE打造PC端蓝光影碟机</title>
+      <link>http://toss.gq/posts/a1d02e91.html</link>
+      <guid>http://toss.gq/posts/a1d02e91.html</guid>
+      <pubDate>Sat, 12 Jun 2021 00:49:45 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;MPC-BE（Media Player Classic Black Edition）是MPC-HC（Media Player</description>
+          
+        
+      
+      
+      
+      
+      <category domain="http://toss.gq/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</category>
+      
+      
+      <category domain="http://toss.gq/tags/%E6%92%AD%E6%94%BE%E5%99%A8/">播放器</category>
+      
+      <category domain="http://toss.gq/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</category>
+      
+      
+      <comments>http://toss.gq/posts/a1d02e91.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>QtScrcpy</title>
@@ -505,31 +534,6 @@
       
       
       <comments>http://toss.gq/posts/f9e8a999.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>二维码生成网址</title>
-      <link>http://toss.gq/posts/de512d8e.html</link>
-      <guid>http://toss.gq/posts/de512d8e.html</guid>
-      <pubDate>Sun, 28 Jun 2020 00:49:45 GMT</pubDate>
-      
-      <description>&lt;p&gt;支持 https 的二维码 api 服务并不多，这里是经过站长精心筛选后剩下的结果。&lt;/p&gt;
-&lt;p&gt;推荐日常使用搜狐视频提供的二维码 api 接口，稳定性很好，已使用多年。&lt;/p&gt;
-&lt;p&gt;使用方法很简单，替换 &lt;code&gt;https://XXXX&lt;/code&gt; 为想要生成的&lt;strong&gt;文字或链接&lt;/strong&gt;即可。&lt;/p&gt;</description>
-      
-      
-      
-      
-      <category domain="http://toss.gq/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</category>
-      
-      
-      <category domain="http://toss.gq/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81/">二维码</category>
-      
-      <category domain="http://toss.gq/tags/API%E6%8E%A5%E5%8F%A3/">API接口</category>
-      
-      
-      <comments>http://toss.gq/posts/de512d8e.html#disqus_thread</comments>
       
     </item>
     
